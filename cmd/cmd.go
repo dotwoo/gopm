@@ -61,7 +61,7 @@ func setup(ctx *cli.Context) (err error) {
 	}
 	setting.DefaultGopmfile = path.Join(setting.WorkDir, setting.GOPMFILE)
 	setting.DefaultVendor = path.Join(setting.WorkDir, setting.VENDOR)
-	setting.DefaultVendorSrc = path.Join(setting.DefaultVendor, "src")
+	setting.DefaultVendorSrc = setting.DefaultVendor
 
 	if !ctx.Bool("remote") {
 		if ctx.Bool("local") {
